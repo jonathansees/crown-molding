@@ -1,0 +1,35 @@
+{
+    "name": "@jonathansees/crown-molding",
+    "module": "/dist/crown-molding",
+    "description": "Styling",
+    "version": "1.0.0",
+    "author": {
+        "name": "Jonathan Sees",
+        "email": "jonathan.m.sees@gmail.com"
+    },
+    "homepage": "https://github.com/jonathansees/crown-molding#readme",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:jonathansees/crown-molding.git"
+    },
+    "scripts": {
+        "build": "webpack --config webpack.config.js",
+        "docs": "start-storybook -p 9001 -c .storybook",
+        "docs:build": "build-storybook -c .storybook -o docs"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
+        "@babel/preset-react": "^7.7.4",
+        "@storybook/addon-info": "^5.2.8",
+        "@storybook/components": "^5.2.8",
+        "@storybook/react": "^5.2.8",
+        "babel-loader": "^8.0.6",
+        "clean-webpack-plugin": "^3.0.0",
+        "react": "^16.12.0",
+        "storybook-addon-jsx": "^7.1.13",
+        "uglifyjs-webpack-plugin": "^2.2.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
+    }
+}
