@@ -1,7 +1,7 @@
 {
     "name": "@jonathansees/crown-molding",
     "module": "/dist/crown-molding",
-    "description": "Styling",
+    "description": "Custom styled-components framework",
     "version": "1.0.0",
     "author": {
         "name": "Jonathan Sees",
