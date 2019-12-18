@@ -1,10 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Header from "./Header";
 
-storiesOf("Header", module)
-    .addWithJSX("Header", () => (
-        <Header>
-            Title
-        </Header>
-    ));
+const stories = storiesOf('Header', module);
+
+stories.addDecorator(withKnobs)
+stories.addWithJSX("Header", () => (
+  <Header>
+    {text("Label", "Title")}
+  </Header>
+));

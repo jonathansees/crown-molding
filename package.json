@@ -14,8 +14,8 @@
     },
     "scripts": {
         "build": "webpack --config webpack.config.js",
-        "docs": "start-storybook -p 9001 -c .storybook",
-        "docs:build": "build-storybook -c .storybook -o docs"
+        "storybook": "start-storybook -p 9001 -c .storybook",
+        "storybook:build": "build-storybook -c .storybook -o docs"
     },
     "devDependencies": {
         "@babel/core": "^7.7.5",
@@ -33,6 +33,7 @@
         "webpack-cli": "^3.3.10"
     },
     "dependencies": {
+        "@storybook/addon-knobs": "^5.2.8",
         "styled-components": "^4.4.1"
     }
 }
