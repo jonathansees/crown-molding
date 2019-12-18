@@ -3,4 +3,4 @@ import JSXAddon from "storybook-addon-jsx";
 
 setAddon(JSXAddon);
 
-configure(() => require("./stories"), module);
+configure(require.context('../src/components', true, /\.stories\.js$/), module);
