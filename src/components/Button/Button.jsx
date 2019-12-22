@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
-import { StyledButton } from './Button.styled' 
+import PropTypes from 'prop-types';
+import StyledButton from './Button.styled';
 
 export default class Button extends Component {
   render() {
     const {
-      children
+      children,
     } = this.props;
 
     return (
       <StyledButton>
         { children }
       </StyledButton>
-    )
+    );
   }
 }
+
+Button.propTypes = {
+  children: PropTypes.string,
+};
+
+Button.defaultProps = {
+  children: 'Submit',
+};

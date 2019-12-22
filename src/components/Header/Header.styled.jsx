@@ -4,4 +4,4 @@ const StyledHeader = styled.h1`
     color: darkgray;
 `;
 
-export { StyledHeader };
+export default StyledHeader;
