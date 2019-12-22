@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import StyledHeader from './Header.styled';
 
-export default class Header extends Component {
-  render() {
-    const {
-      children,
-    } = this.props;
+const Header = (props) => {
+  const {
+    children,
+  } = props;
 
-    return (
-      <StyledHeader>
-        { children }
-      </StyledHeader>
-    );
-  }
-}
+  return (
+    <StyledHeader>
+      { children }
+    </StyledHeader>
+  );
+};
 
 Header.propTypes = {
   children: PropTypes.string,
@@ -23,3 +21,5 @@ Header.propTypes = {
 Header.defaultProps = {
   children: 'Title',
 };
+
+export default Header;
