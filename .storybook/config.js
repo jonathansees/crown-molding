@@ -1,5 +1,6 @@
 import { configure, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
+import '@storybook/addon-console';
 
 setAddon(JSXAddon);
 
