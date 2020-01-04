@@ -19,7 +19,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  children: 'Submit',
+  children: 'Release',
 };
 
 export default Button;
