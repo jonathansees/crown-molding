@@ -8,6 +8,6 @@ const stories = storiesOf('Header', module);
 stories.addDecorator(withKnobs);
 stories.addWithJSX('Header', () => (
   <Header>
-    {text('Label', 'Worked')}
+    {text('Label', 'Title')}
   </Header>
 ));
