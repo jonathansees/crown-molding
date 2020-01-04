@@ -9,7 +9,7 @@ const Button = (props) => {
 
   return (
     <StyledButton>
-      Success!
+      { children }
     </StyledButton>
   );
 };
@@ -19,7 +19,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  children: 'Release',
+  children: 'Submit',
 };
 
 export default Button;
