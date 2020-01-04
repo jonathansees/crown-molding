@@ -2,7 +2,7 @@
     "name": "@jonathansees/crown-molding",
     "module": "/dist/crown-molding",
     "description": "Custom styled-components framework",
-    "version": "1.0.31",
+    "version": "1.0.32",
     "author": {
         "name": "Jonathan Sees",
         "email": "jonathan.m.sees@gmail.com"
