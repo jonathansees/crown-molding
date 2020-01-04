@@ -2,7 +2,7 @@
     "name": "@jonathansees/crown-molding",
     "module": "/dist/crown-molding",
     "description": "Custom styled-components framework",
-    "version": "1.0.0",
+    "version": "1.0.23",
     "author": {
         "name": "Jonathan Sees",
         "email": "jonathan.m.sees@gmail.com"
@@ -27,6 +27,7 @@
         "@storybook/addon-info": "^5.2.8",
         "@storybook/addon-viewport": "^5.2.8",
         "@storybook/components": "^5.2.8",
+        "@storybook/react": "^5.2.8",
         "babel-loader": "^8.0.6",
         "clean-webpack-plugin": "^3.0.0",
         "eslint": "^6.7.2",
@@ -35,6 +36,7 @@
         "eslint-plugin-jsx-a11y": "^6.2.3",
         "eslint-plugin-react": "^7.17.0",
         "eslint-plugin-react-hooks": "^1.7.0",
+        "react": "^16.7.0",
         "storybook-addon-jsx": "^7.1.13",
         "uglifyjs-webpack-plugin": "^2.2.0",
         "webpack": "^4.41.2",

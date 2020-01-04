@@ -1,34 +1,37 @@
-const webpack = require("webpack");
-const path = require("path");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const webpack = require('webpack');
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: "production",
-  entry: "./src/index.js",
+  mode: 'production',
+  entry: './src/index.js',
   output: {
-      
-    filename: "crown-molding.js",
-    library: "crown-molding",
-    libraryTarget: "umd",
-    path: path.resolve(__dirname, "dist")
+    filename: 'crown-molding.js',
+    library: 'crown-molding',
+    libraryTarget: 'umd',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"]
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
+    ],
   },
   optimization: {
-    minimizer: [new UglifyJsPlugin()]
+    minimizer: [new UglifyJsPlugin()],
   },
-  plugins: [new CleanWebpackPlugin(["dist"])]
+  //   plugins: [new CleanWebpackPlugin(['dist'])],
+  plugins: [new CleanWebpackPlugin()],
 };

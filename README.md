@@ -1,5 +1,7 @@
 # Crown Molding
 
+[![npm version](https://img.shields.io/npm/v/@jonathansees/crown-molding)](https://www.npmjs.com/package/@jonathansees/crown-molding)
+
 | Task | Description |
 | ----------- | ----------- |
 | [Run Storybook](#Storybook) | Run Storybook on your local machine to view components |
