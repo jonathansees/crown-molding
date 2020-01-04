@@ -8,6 +8,6 @@ const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs);
 stories.addWithJSX('Button', () => (
   <Button>
-    {text('Label', 'Submit')}
+    {text('Label', 'Worked')}
   </Button>
 ));
