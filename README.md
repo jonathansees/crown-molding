@@ -7,9 +7,11 @@
 | [Run Storybook](#Storybook) | Run Storybook on your local machine to view components |
 | [Components](#Components) | List components |
 
+[Storybook](https://jonathansees.github.io/crown-molding)
+
 ## Storybook
 1. `npm run docs`
-2. View in [Storybook](http://localhost:9001)
+2. View in [Storybook (http://localhost:9001)](http://localhost:9001)
 
 ## Components
 1. Header
