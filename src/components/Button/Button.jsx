@@ -9,7 +9,7 @@ const Button = (props) => {
 
   return (
     <StyledButton>
-      Hello
+      { children }
     </StyledButton>
   );
 };
