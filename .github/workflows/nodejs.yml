@@ -23,5 +23,3 @@ jobs:
         npm run build
         npm run storybook:build
         npm test --if-present
-      env:
-        CI: true
