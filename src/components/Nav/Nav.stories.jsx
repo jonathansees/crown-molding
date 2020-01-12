@@ -1,22 +1,28 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
   withKnobs,
   text,
   boolean,
   color,
 } from '@storybook/addon-knobs';
+import { jsxDecorator } from 'storybook-addon-jsx';
 import styles from '@sambego/storybook-styles';
 import Nav from './Nav';
 import Container from '../Container/Container';
 
-const stories = storiesOf('Nav', module);
+export default {
+  title: 'Nav',
+  component: Nav,
+  decorators: [
+    jsxDecorator,
+    withKnobs,
+    styles({
+      height: '150vh',
+    }),
+  ],
+};
 
-stories.addDecorator(styles({
-  height: '150vh',
-}));
-stories.addDecorator(withKnobs);
-stories.addWithJSX('Nav', () => (
+export const Default = () => (
   <>
     <Nav
       color={color('color', undefined)}
@@ -29,4 +35,4 @@ stories.addWithJSX('Nav', () => (
       </Container>
     </Nav>
   </>
-));
+);

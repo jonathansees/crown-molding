@@ -1,20 +1,26 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
+import { jsxDecorator } from 'storybook-addon-jsx';
 import styles from '@sambego/storybook-styles';
 import Header from './Header';
 
-const stories = storiesOf('Header', module);
+export default {
+  title: 'Header',
+  component: Header,
+  decorators: [
+    jsxDecorator,
+    withKnobs,
+    styles({
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '90vh',
+    }),
+  ],
+};
 
-stories.addDecorator(styles({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '90vh',
-}));
-stories.addDecorator(withKnobs);
-stories.addWithJSX('Header', () => (
+export const Default = () => (
   <Header>
     {text('Label', 'Title')}
   </Header>
-));
+);
