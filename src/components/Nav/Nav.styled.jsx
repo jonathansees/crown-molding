@@ -1,5 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import variables from '../../utils/variables';
+
+const sticky = css`
+  position: fixed;
+  transition: all .6s;
+  opacity: ${(props) => (props.show ? 1 : 0)};
+  z-index: ${(props) => (props.show ? 100 : -1)};
+`;
 
 const StyledNav = styled.div`
   top: 0;
@@ -9,16 +16,7 @@ const StyledNav = styled.div`
   width: 100%;
   height: ${(props) => props.height || variables.height};
   background-color: ${(props) => props.color || props.theme.primary || variables.primary};
+  ${(props) => props.sticky && sticky}
 `;
 
-const StyledStickyNav = styled(StyledNav)`
-  position: fixed;
-  transition: all .6s;
-  opacity: ${(props) => (props.show ? 1 : 0)};
-  z-index: ${(props) => (props.show ? 100 : -1)};
-`;
-
-export {
-  StyledNav,
-  StyledStickyNav,
-};
+export default StyledNav;

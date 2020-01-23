@@ -23,16 +23,14 @@ export default {
 };
 
 export const Default = () => (
-  <>
-    <Nav
-      color={color('color', undefined)}
-      sticky={boolean('sticky', false)}
-      height={text('height', undefined)}
-    >
-      <Container>
-        <div>Left</div>
-        <div>Right</div>
-      </Container>
-    </Nav>
-  </>
+  <Nav
+    color={color('color', undefined)}
+    sticky={boolean('sticky', false)}
+    height={text('height', undefined)}
+  >
+    <Container>
+      <div>Left</div>
+      <div>Right</div>
+    </Container>
+  </Nav>
 );
