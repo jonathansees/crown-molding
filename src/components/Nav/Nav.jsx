@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledNav from './Nav.styled';
+import { StyledNav, StyledStickyNav } from './Nav.styled';
 import variables from '../../utils/variables';
 
 class Nav extends React.Component {
@@ -47,13 +47,12 @@ class Nav extends React.Component {
           { children }
         </StyledNav>
         {sticky ? (
-          <StyledNav
+          <StyledStickyNav
             height={height}
-            sticky={sticky}
             show={show}
           >
             { children }
-          </StyledNav>
+          </StyledStickyNav>
         ) : null}
       </>
     );

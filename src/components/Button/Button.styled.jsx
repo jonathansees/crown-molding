@@ -10,7 +10,7 @@ const colorProperties = (background, color, border) => css`
   border: 2px solid ${border};
 `;
 
-const handleColorType = (type) => {
+const handleTypeColor = (type) => {
   switch (type) {
     case 'inverse':
       return colorProperties(bgColor, secondaryColor, secondaryColor);
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-  ${({ type }) => handleColorType(type)};
+  ${({ type }) => handleTypeColor(type)};
 `;
 
 StyledButton.propTypes = {

@@ -7,6 +7,7 @@ import {
   boolean,
 } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
+import { withA11y } from '@storybook/addon-a11y';
 import styles from '@sambego/storybook-styles';
 import Themes from '../../utils/themes';
 import Nav from './Nav';
@@ -19,6 +20,7 @@ export default {
   decorators: [
     jsxDecorator,
     withKnobs,
+    withA11y,
     styles({
       height: '150vh',
     }),

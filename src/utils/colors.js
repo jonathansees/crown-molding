@@ -1,4 +1,3 @@
-
 import theme from 'styled-theming';
 import Themes from './themes';
 
