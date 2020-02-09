@@ -19,7 +19,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  children: 'Title',
+  children: '',
 };
 
 export default Header;

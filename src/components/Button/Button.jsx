@@ -5,10 +5,11 @@ import StyledButton from './Button.styled';
 const Button = (props) => {
   const {
     children,
+    type,
   } = props;
 
   return (
-    <StyledButton>
+    <StyledButton type={type}>
       { children }
     </StyledButton>
   );
@@ -16,10 +17,12 @@ const Button = (props) => {
 
 Button.propTypes = {
   children: PropTypes.string,
+  type: PropTypes.oneOf(['inverse', 'transparent']),
 };
 
 Button.defaultProps = {
   children: 'Submit',
+  type: undefined,
 };
 
 export default Button;

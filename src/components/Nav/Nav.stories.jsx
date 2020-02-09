@@ -1,14 +1,17 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import {
+  radios,
   withKnobs,
   text,
   boolean,
-  color,
 } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import styles from '@sambego/storybook-styles';
+import Themes from '../../utils/themes';
 import Nav from './Nav';
 import Container from '../Container/Container';
+import Button from '../Button/Button';
 
 export default {
   title: 'Nav',
@@ -23,14 +26,26 @@ export default {
 };
 
 export const Default = () => (
-  <Nav
-    color={color('color', undefined)}
-    sticky={boolean('sticky', false)}
-    height={text('height', undefined)}
-  >
-    <Container>
-      <div>Left</div>
-      <div>Right</div>
-    </Container>
-  </Nav>
+  <ThemeProvider theme={{ mode: radios('Themes', Themes, Themes[0]) }}>
+    <Nav
+      sticky={boolean('sticky', false)}
+      height={text('height', '40px')}
+    >
+      <Container>
+        <Button
+          type="transparent"
+        >
+          Left
+        </Button>
+        <div>
+          <Button
+            type="inverse"
+          >
+              Right
+          </Button>
+          <Button>Right</Button>
+        </div>
+      </Container>
+    </Nav>
+  </ThemeProvider>
 );

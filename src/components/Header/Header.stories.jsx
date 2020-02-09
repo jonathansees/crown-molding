@@ -21,6 +21,6 @@ export default {
 
 export const Default = () => (
   <Header>
-    {text('Label', 'Title')}
+    {text('Label', 'Header')}
   </Header>
 );

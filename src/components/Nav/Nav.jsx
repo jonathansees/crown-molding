@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
 import StyledNav from './Nav.styled';
 import variables from '../../utils/variables';
 
@@ -22,7 +21,7 @@ class Nav extends React.Component {
   }
 
   handleScroll() {
-    const show = window.pageYOffset > 30;
+    const show = window.pageYOffset > 40;
 
     this.setState({
       show,
@@ -34,37 +33,28 @@ class Nav extends React.Component {
       children,
       sticky,
       height,
-      color,
     } = this.props;
 
     const {
       show,
     } = this.state;
 
-    const theme = {
-      primary: 'mediumseagreen',
-    };
-
     return (
       <>
-        <ThemeProvider theme={theme}>
+        <StyledNav
+          height={height}
+        >
+          { children }
+        </StyledNav>
+        {sticky ? (
           <StyledNav
             height={height}
-            color={color}
+            sticky={sticky}
+            show={show}
           >
             { children }
           </StyledNav>
-          {sticky ? (
-            <StyledNav
-              height={height}
-              color={color}
-              sticky={sticky}
-              show={show}
-            >
-              { children }
-            </StyledNav>
-          ) : null}
-        </ThemeProvider>
+        ) : null}
       </>
     );
   }
@@ -77,13 +67,11 @@ Nav.propTypes = {
   ]).isRequired,
   sticky: PropTypes.bool,
   height: PropTypes.string,
-  color: PropTypes.string,
 };
 
 Nav.defaultProps = {
   sticky: false,
   height: variables.navHeight,
-  color: variables.cream,
 };
 
 export default Nav;

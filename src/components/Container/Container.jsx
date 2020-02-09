@@ -8,11 +8,9 @@ const Container = (props) => {
   } = props;
 
   return (
-    <>
-      <StyledContainer>
-        { children }
-      </StyledContainer>
-    </>
+    <StyledContainer>
+      { children }
+    </StyledContainer>
   );
 };
 
