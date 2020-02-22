@@ -12,6 +12,7 @@ import styles from '@sambego/storybook-styles';
 import Themes from '../../utils/themes';
 import Nav from './Nav';
 import Container from '../Container/Container';
+import Header from '../Header/Header';
 import Button from '../Button/Button';
 
 export default {
@@ -34,14 +35,14 @@ export const Default = () => (
       height={text('height', '40px')}
     >
       <Container>
-        <Button
+        <Header
           type="transparent"
         >
           Left
-        </Button>
+        </Header>
         <div>
           <Button
-            type="inverse"
+            type="transparent"
           >
               Right
           </Button>
