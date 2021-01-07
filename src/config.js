@@ -1,6 +1,8 @@
 const config = {
-  defaultTheme: {
-    mode: 'light',
+  theme: {
+    mode: 'main',
+    size: 'medium',
+    variant: 'primary',
   },
 };
 
