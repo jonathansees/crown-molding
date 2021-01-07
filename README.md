@@ -25,5 +25,9 @@
 8. Publish release
 
 ## Components
-1. Header
-2. Button
+1. Button
+2. Checkbox
+3. Radio
+4. Select
+5. Table
+6. TextInput
